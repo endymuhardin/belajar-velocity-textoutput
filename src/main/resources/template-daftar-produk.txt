@@ -1,0 +1,11 @@
+Daftar Produk
+
+Terakhir Update : $formatterWaktu.format($tanggal)
+
++---------------+----------------------+---------------------+----------------------+
+|     Kode      |         Nama         |        Harga        |      Kadaluarsa      |
++---------------+----------------------+---------------------+----------------------+
+#foreach($p in $daftarProduk)
+| $stringUtils.rightPad($p.kode, 13, " ") | $stringUtils.rightPad($p.nama, 20, " ") | Rp. $stringUtils.leftPad($formatterAngka.format($p.harga), 15, " ") | $stringUtils.center($formatterTanggal.format($p.tanggalKadaluarsa), 20, " ") |
+#end
++---------------+----------------------+---------------------+----------------------+
