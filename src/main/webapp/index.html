@@ -4,8 +4,21 @@
         <title>Aplikasi Web Java</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-    <body>
+    <body ng-app ng-controller="PrintController">
         <h1>Aplikasi Web Java</h1>
+    
         
+        <button ng-click="printPreview()">Preview</button>
+        <button ng-click="print()">Print</button>
+
+        <h2>Print Preview</h2>
+        <hr>
+        <div id="preview">
+            <pre>{{printContent}}</pre>
+        </div>
+        <hr>
+    <applet name="jzebra" code="jzebra.PrintApplet.class" archive="applet/jzebra.jar" width="1" height="1"></applet>    
+    <script src="js/angular.min.js"></script>
+    <script src="js/aplikasi.js"></script>    
     </body>
 </html>
